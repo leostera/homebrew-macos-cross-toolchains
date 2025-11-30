@@ -1,15 +1,15 @@
 # macos-cross-toolchains
 
-> 🚀 Help me to become a full-time open-source developer by [sponsoring me on GitHub](https://github.com/sponsors/messense)
+> 🚀 Help me to become a full-time open-source developer by [sponsoring me on GitHub](https://github.com/sponsors/leostera)
 
 macOS cross compiler toolchains, supports both Apple Silicon & Intel Macs.
 
-Download precompiled toolchains from [GitHub Release](https://github.com/messense/homebrew-macos-cross-toolchains/releases)
+Download precompiled toolchains from [GitHub Release](https://github.com/leostera/homebrew-macos-cross-toolchains/releases)
 
 Or install using Homebrew:
 
 ```bash
-brew tap messense/macos-cross-toolchains
+brew tap leostera/macos-cross-toolchains
 # install x86_64-unknown-linux-gnu toolchain
 brew install x86_64-unknown-linux-gnu
 # install aarch64-unknown-linux-gnu toolchain

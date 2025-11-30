@@ -1,6 +1,6 @@
 class {{ name }} < Formula
   desc "{{ description }}"
-  homepage "https://github.com/messense/homebrew-macos-cross-toolchains"
+  homepage "https://github.com/leostera/homebrew-macos-cross-toolchains"
   license "GPL-3.0-or-later" => { with: "GCC-exception-3.1" }
   version "{{ version }}"
 
@@ -10,10 +10,10 @@ class {{ name }} < Formula
   depends_on "python@3.12"
 
   if Hardware::CPU.arm?
-    url "https://github.com/messense/homebrew-macos-cross-toolchains/releases/download/v{{ version }}/{{ aarch64_artifact_name }}"
+    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v{{ version }}/{{ aarch64_artifact_name }}"
     sha256 "{{ aarch64_sha256 }}"
   else
-    url "https://github.com/messense/homebrew-macos-cross-toolchains/releases/download/v{{ version }}/{{ x86_64_artifact_name }}"
+    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v{{ version }}/{{ x86_64_artifact_name }}"
     sha256 "{{ x86_64_sha256 }}"
   end
 
