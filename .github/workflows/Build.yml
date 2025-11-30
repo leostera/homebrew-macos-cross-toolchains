@@ -63,6 +63,13 @@ jobs:
           mkdir /Volumes/build/src
           cd ${{ matrix.target }}
           ct-ng build -j $(($(nproc) - 1))
+      - name: Build Extra Libraries (OpenSSL, libuuid)
+        run: |
+          set -ex
+          ./build-extra-libs.sh \
+            ${{ matrix.target }} \
+            /Volumes/tools/${{ matrix.target }}/${{ matrix.target }}/sysroot \
+            $(($(nproc) - 1))
       - name: Tail build.log on failure
         if: ${{ failure() }}
         run: tail -n 500 ${{ matrix.target }}/build.log
