@@ -16,6 +16,10 @@ BUILD_DIR=/Volumes/build/extra-libs
 SRC_DIR=/Volumes/build/src
 mkdir -p "$BUILD_DIR" "$SRC_DIR"
 
+# Add toolchain to PATH
+TOOLCHAIN_BIN="/Volumes/tools/${TARGET}/bin"
+export PATH="${TOOLCHAIN_BIN}:${PATH}"
+
 # Set cross-compilation environment
 export CC="${TARGET}-gcc"
 export CXX="${TARGET}-g++"
