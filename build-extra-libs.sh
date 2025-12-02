@@ -59,6 +59,9 @@ if [ ! -d openssl-3.4.0 ]; then
 fi
 cd openssl-3.4.0
 
+# Clean previous build
+make clean 2>/dev/null || true
+
 # Determine OpenSSL target
 case "$TARGET" in
     aarch64-*-linux-*)
@@ -84,6 +87,10 @@ case "$TARGET" in
         exit 1
         ;;
 esac
+
+# OpenSSL uses CC/AR/RANLIB directly, so unset our exported ones
+# and let Configure handle cross-compilation via --cross-compile-prefix
+unset CC CXX AR RANLIB STRIP
 
 ./Configure "$OPENSSL_TARGET" \
     --prefix=/usr \
