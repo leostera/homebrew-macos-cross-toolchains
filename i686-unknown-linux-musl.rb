@@ -9,13 +9,8 @@ class I686UnknownLinuxMusl < Formula
   depends_on "zstd"
   depends_on "python@3.12"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/i686-unknown-linux-musl-aarch64-darwin.tar.gz"
-    sha256 "af39edc473382a0a1fa583ee28d21c2bf20c3aea55129e3a5bad3f614ba85019"
-  else
-    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/i686-unknown-linux-musl-x86_64-darwin.tar.gz"
-    sha256 "0969c1b83bfc177774edf616f74b953e2239693c19d2b419485b29ff90608f58"
-  end
+  url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/i686-unknown-linux-musl-aarch64-darwin.tar.gz"
+  sha256 "2920c0218a8c3f091de15e24f5c07eff9bd14c49590d6517a6f52c505da4a1d1"
 
   def install
     (prefix/"toolchain").install Dir["./*"]

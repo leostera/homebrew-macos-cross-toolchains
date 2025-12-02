@@ -9,13 +9,8 @@ class Armv7UnknownLinuxMusleabihf < Formula
   depends_on "zstd"
   depends_on "python@3.12"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/armv7-unknown-linux-musleabihf-aarch64-darwin.tar.gz"
-    sha256 "92d9829dcd2bfa3fe895ae6a3c74436e5caf272dfafe406e17a090fd163feb38"
-  else
-    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/armv7-unknown-linux-musleabihf-x86_64-darwin.tar.gz"
-    sha256 "684a6a2b99f8462c73119b0b36309e4c384fbd303d06adbb9a2ddb53ea5cdbc0"
-  end
+  url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/armv7-unknown-linux-musleabihf-aarch64-darwin.tar.gz"
+  sha256 "a0676c8d61f008174480bef560e4643787d8e37676fe6b176ee1e3feebda2a31"
 
   def install
     (prefix/"toolchain").install Dir["./*"]

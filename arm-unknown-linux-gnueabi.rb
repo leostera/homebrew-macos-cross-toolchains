@@ -9,13 +9,8 @@ class ArmUnknownLinuxGnueabi < Formula
   depends_on "zstd"
   depends_on "python@3.12"
 
-  if Hardware::CPU.arm?
-    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/arm-unknown-linux-gnueabi-aarch64-darwin.tar.gz"
-    sha256 "7167c4c5adffad5fc6681e4a810868251aba005bc8989f3e7a6d1ee0d4c9099b"
-  else
-    url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/arm-unknown-linux-gnueabi-x86_64-darwin.tar.gz"
-    sha256 "bf7cd8ecdafb5a451aab20ab4871fedcfdd275a5aa7c398f26f975de73f1b235"
-  end
+  url "https://github.com/leostera/homebrew-macos-cross-toolchains/releases/download/v13.4.0/arm-unknown-linux-gnueabi-aarch64-darwin.tar.gz"
+  sha256 "e925f58cfc404b1ec4d1fdb068591795131a1a6bce4f36a5edf943afc6fa360a"
 
   def install
     (prefix/"toolchain").install Dir["./*"]
