@@ -23,8 +23,6 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - name: macos-12
-            arch: x86_64
           - name: macos-14
             arch: aarch64
         target:
